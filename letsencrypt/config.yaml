@@ -101,6 +101,10 @@ schema:
     ovh_application_secret: str?
     ovh_consumer_key: str?
     ovh_endpoint: str?
+    pdns_api_key: str?
+    pdns_disable_notify: bool?    
+    pdns_endpoint: str?    
+    pdns_server_id: str?
     plesk_api_url: str?
     plesk_password: str?
     plesk_username: str?
@@ -142,6 +146,7 @@ schema:
         dns-noris|\
         dns-nsone|\
         dns-ovh|\
+        dns-pdns|\
         dns-plesk|\
         dns-porkbun|\
         dns-rfc2136|\

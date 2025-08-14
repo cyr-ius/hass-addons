@@ -76,6 +76,7 @@ dns-njalla
 dns-noris
 dns-nsone
 dns-ovh
+dns-pdns
 dns-plesk
 dns-porkbun
 dns-rfc2136
@@ -161,6 +162,10 @@ ovh_application_key: ''
 ovh_application_secret: ''
 ovh_consumer_key: ''
 ovh_endpoint: ''
+pdns_api_key: ''
+pdns_disable_notify: ''
+pdns_endpoint: ''
+pdns_server_id: ''
 plesk_api_url: ''
 plesk_password: ''
 plesk_username: ''
@@ -1174,6 +1179,29 @@ Example configuration
   ```
 
 Use `ovh_endpoint: ovh-ca` for North America region.
+
+</details>
+
+<details>
+  <summary>Powerdns</summary>
+
+  ```yaml
+  email: your.email@example.com
+  domains:
+    - your.domain.tld
+  certfile: fullchain.pem
+  keyfile: privkey.pem
+  challenge: dns
+  dns:
+    provider: dns-pdns
+    pdns_api_key: your-key
+    pdns_server_id: your-server-id
+    pdns_endpoint: https://pdns-api.example.com
+    pdns_disable_notify: false
+    propagation_seconds: 120
+  ```
+
+You can define the `pdns_disable_notify` explicitly. Disable slave notifications from master
 
 </details>
 

@@ -255,6 +255,16 @@ if [ "${CHALLENGE}" == "dns" ]; then
             ACME_ARGUMENTS+=("--authenticator" "${DNS_PROVIDER}" "--${DNS_PROVIDER}-credentials" "/data/dnsapikey" "--${DNS_PROVIDER}-propagation-seconds" "${PROPAGATION_SECONDS}")
             ;;
 
+
+        # Powerdns
+        'dns-pdns')
+            bashio::config.require 'dns.pdns_api_key'
+            bashio::config.require 'dns.pdns_server_id'
+            bashio::config.require 'dns.pdns_endpoint'
+            bashio::config.require 'dns.pdns_disable_notify'
+            ACME_ARGUMENTS+=("--authenticator" "${DNS_PROVIDER}" "--${DNS_PROVIDER}-credentials" "/data/dnsapikey" "--${DNS_PROVIDER}-propagation-seconds" "${PROPAGATION_SECONDS}")
+            ;;
+
         # Plesk
         'dns-plesk')
             bashio::config.require 'dns.plesk_username'

@@ -30,6 +30,7 @@ ARG \
     CERTBOT_DNS_NETCUP_VERSION \
     CERTBOT_DNS_NJALLA_VERSION \
     CERTBOT_DNS_NORISNETWORK_VERSION \
+    CERTBOT_DNS_PDNS_VERSION \
     CERTBOT_DNS_PLESK_VERSION \
     CERTBOT_DNS_PORKBUN_VERSION \
     CERTBOT_DNS_SIMPLY_VERSION \
@@ -87,6 +88,7 @@ RUN \
         certbot-dns-norisnetwork==${CERTBOT_DNS_NORISNETWORK_VERSION} \
         certbot-dns-nsone==${CERTBOT_VERSION} \
         certbot-dns-ovh==${CERTBOT_VERSION} \
+        certbot-dns-plesk==${CERTBOT_DNS_PDNS_VERSION} \        
         certbot-dns-plesk==${CERTBOT_DNS_PLESK_VERSION} \
         certbot-dns-porkbun==${CERTBOT_DNS_PORKBUN_VERSION} \
         certbot-dns-rfc2136==${CERTBOT_VERSION} \
